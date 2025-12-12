@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Classifier</title>
+</head>
+<body>
+    <h1>Text Classification</h1>
+    <form method="POST">
+        <input type="text" name="user_input" placeholder="Enter text..." required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <p><strong>{{ prediction }}</strong></p>
+    {% endif %}
+
+    {% if error %}
+        <p style="color:red;">Error: {{ error }}</p>
+    {% endif %}
+</body>
+</html>
